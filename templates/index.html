@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CareAI - Healthcare Diagnosis Assistant</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            🏥 CareAI
+        </div>
+
+        <div class="tagline">
+            AI-Powered Healthcare Assistant
+        </div>
+    </header>
+
+
+    <main class="main-container">
+
+        <section class="hero">
+
+            <div class="hero-icon">
+                🩺
+            </div>
+
+            <h1>AI Healthcare Diagnosis Assistant</h1>
+
+            <p>
+                Enter your symptoms and our machine-learning model
+                will provide an educational prediction.
+            </p>
+
+        </section>
+
+
+        <section class="card">
+
+            <form action="/predict" method="POST">
+
+    <label>Select Your Symptoms</label>
+
+    <p class="help-text">
+        Select all symptoms that you are experiencing.
+    </p>
+
+    <div class="symptom-grid">
+
+        <label class="symptom-option">
+            <input type="checkbox" name="symptoms" value="fever">
+            Fever
+        </label>
+
+        <label class="symptom-option">
+            <input type="checkbox" name="symptoms" value="cough">
+            Cough
+        </label>
+
+        <label class="symptom-option">
+            <input type="checkbox" name="symptoms" value="fatigue">
+            Fatigue
+        </label>
+
+        <label class="symptom-option">
+            <input type="checkbox" name="symptoms" value="headache">
+            Headache
+        </label>
+
+        <label class="symptom-option">
+            <input type="checkbox" name="symptoms" value="nausea">
+            Nausea
+        </label>
+
+        <label class="symptom-option">
+            <input type="checkbox" name="symptoms" value="sneezing">
+            Sneezing
+        </label>
+
+        <label class="symptom-option">
+            <input type="checkbox" name="symptoms" value="runny nose">
+            Runny Nose
+        </label>
+
+        <label class="symptom-option">
+            <input type="checkbox" name="symptoms" value="body pain">
+            Body Pain
+        </label>
+
+        <label class="symptom-option">
+            <input type="checkbox" name="symptoms" value="sore throat">
+            Sore Throat
+        </label>
+
+        <label class="symptom-option">
+            <input type="checkbox" name="symptoms" value="dizziness">
+            Dizziness
+        </label>
+
+        <label class="symptom-option">
+            <input type="checkbox" name="symptoms" value="itchy eyes">
+            Itchy Eyes
+        </label>
+
+        <label class="symptom-option">
+            <input type="checkbox" name="symptoms" value="rash">
+            Rash
+        </label>
+
+    </div>
+
+    <button type="submit">
+        🔍 Analyze Symptoms
+    </button>
+
+</form>
+{% if error %}
+<div class="error-message">
+    ⚠️ {{ error }}
+</div>
+{% endif %} 
+
+
+            {% if prediction %}
+
+            <div class="result">
+
+                <h2>📋 Prediction Result</h2>
+
+                <div class="result-item">
+                    <span>Symptoms:</span>
+                    <strong>{{ symptoms }}</strong>
+                </div>
+
+                <div class="result-item">
+                    <span>Predicted Condition:</span>
+                    <strong class="prediction">
+                        {{ prediction }}
+                    </strong>
+                </div>
+
+            </div>
+
+            {% endif %}
+
+        </section>
+
+
+        <section class="features">
+
+            <div class="feature">
+                <span>🤖</span>
+                <h3>AI Powered</h3>
+                <p>Uses a machine-learning model for prediction.</p>
+            </div>
+
+            <div class="feature">
+                <span>⚡</span>
+                <h3>Fast Results</h3>
+                <p>Get a prediction within seconds.</p>
+            </div>
+
+            <div class="feature">
+                <span>🔒</span>
+                <h3>Privacy</h3>
+                <p>Designed as a local educational application.</p>
+            </div>
+
+        </section>
+
+
+        
+    </main>
+
+
+    <footer>
+        <p>© 2026 CareAI | AI Healthcare Diagnosis Assistant</p>
+    </footer>
+
+</body>
+</html>

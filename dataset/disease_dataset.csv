@@ -1,0 +1,15 @@
+disease,symptom1,symptom2,symptom3,symptom4
+Common Cold,runny nose,sneezing,cough,sore throat
+Common Cold,sneezing,runny nose,cough,headache
+Flu,fever,cough,body pain,fatigue
+Flu,fever,chills,headache,body pain
+Migraine,headache,nausea,light sensitivity,dizziness
+Migraine,headache,nausea,blurred vision,fatigue
+Allergy,sneezing,itchy eyes,runny nose,rash
+Allergy,itchy eyes,sneezing,rash,cough
+Gastritis,stomach pain,nausea,vomiting,bloating
+Gastritis,stomach pain,heartburn,nausea,bloating
+Diabetes,frequent urination,excessive thirst,fatigue,blurred vision
+Diabetes,excessive thirst,frequent urination,weight loss,fatigue
+Hypertension,headache,dizziness,blurred vision,fatigue
+Hypertension,headache,dizziness,nausea,blurred vision 
